@@ -13,49 +13,64 @@
        <div class="test">
      test
       </div>
+      <f7-button class="px-test" @click="nav_px_test">
+      
+       PX_VW_% test
+      </f7-button>
+        <f7-button class="vw-test"  @click="nav_vw_test">
+       VW tweenmax
+      </f7-button>
+        <!-- <f7-button class="percent-test"  @click="nav_percent_test"> -->
+       <!-- 百分比 test -->
+      <!-- </f7-button> -->
     </f7-block> 
   </f7-page>
 </template>
-<style>
-.test{
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 100px;
-  left: 50px;
-  background-color: blue;
-}
+<style> 
 </style>
 
 <script>
 import Vue from 'vue';
 import $ from 'jquery';
-import '../css/home.css';
-    // 全局函数
-    // Vue.prototype.bb = function () {
-    //   alert('OK');
-    // }
+import '../css/home.css'; 
+      Vue.prototype.px_vw = function (px) {
+       var vw=px/750*100;
+        return(vw+'vw');
+    }
     export default { 
       methods:{
         //vue绑定事件方法   @click  or  v-on:click
         show:function(){
-        alert("vue事件绑定方法"); 
-      }  
+         alert("vue事件绑定方法");  
+           var t = new TimelineLite();
+            t.to(".tweenDiv",2,{top:800,scale:2}); 
+      }  ,
+      nav_px_test:function(){
+        this.$f7router.navigate('/demo1/');
+      },
+       nav_vw_test:function(){
+        this.$f7router.navigate('/demo2/');
+      },
+       nav_percent_test:function(){
+        this.$f7router.navigate('/demo/');
+      }
     }
     ,
      beforeCreate: function() {
-       console.log("添加loading");
+       alert("添加loading");
      },
       beforeMount() {
         console.log('模板编译之前');		
         },	
-      mounted() { 
+      mounted() {  
         /*请求数据，操作dom*/
         // jquery绑定函数操作
           $(".jqueryAlert").bind("click",function(){
+            // 跳转问题 
             alert("jquery绑定方法");
               var t = new TimelineLite();
-            t.to(".tweenDiv",2,{top:300,scale:0.5}); 
+            t.to(".tweenDiv",2,{top:600,scale:2}); 
+            
           })
         }
                                         

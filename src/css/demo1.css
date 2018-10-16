@@ -1,32 +1,5 @@
 /* Your app styles here */
 
-.tweenDiv {
-    width: 300px;
-    height: 50px;
-    left: 50px;
-    position: absolute;
-    top: 600px;
-    background-color: red;
-}
-
-.px-test {
-    width: 300px;
-    position: absolute;
-    top: 250px;
-}
-
-.vw-test {
-    width: 300px;
-    position: absolute;
-    top: 300px;
-}
-
-.percent-test {
-    width: 300px;
-    position: absolute;
-    top: 350px;
-}
-
 .back_nav {
     z-index: 100;
 }

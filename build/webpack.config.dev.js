@@ -31,6 +31,7 @@ module.exports = {
         hot: true,
         open: true,
         compress: true,
+        // host: '10.152.152.185',
         contentBase: '/www/',
         watchOptions: {
             poll: true
@@ -98,6 +99,26 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: 'fonts/[name].[hash:7].[ext]'
+                }
+            },
+            // 添加postcss-px-to-vw
+            {
+                test: /\.css$/,
+                loader: "postcss-loader",
+                options: {
+                    plugins: (loader) => [
+                        require('postcss-px-to-viewport')({
+                            // viewportWidth: 750, //根据视觉稿的宽度进行设置
+                            // viewportHeight: 1334,
+                            viewportWidth: 750, //根据视觉稿的宽度进行设置
+                            viewportHeight: 1334,
+                            unitPrecision: 5,
+                            viewportUnit: 'vw',
+                            selectorBlackList: ['.ignoreDiv', '.ignoreRem'], //忽略转换的css选择器
+                            minPixelValue: 1,
+                            mediaQuery: false
+                        }),
+                    ]
                 }
             }
         ]
