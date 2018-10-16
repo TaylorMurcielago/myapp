@@ -18,6 +18,7 @@ import AppStyles from './css/app.css';
 import App from './app.vue';
 import $ from 'jquery';
 import { TweenMax, TimelineLite } from "gsap";
+// import { swiper, swiperSlide } from "vue-awesome-swiper";
 // Init F7 Vue Plugin
 Framework7.use(Framework7Vue)
 

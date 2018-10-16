@@ -30,8 +30,9 @@
 .ignoreDiv {
     position: absolute;
     top: 300px;
-    width: 375px;
+    width: 150px;
     height: 100px;
+    left: 75px;
     background-color: green;
     z-index: 1;
 }
@@ -39,7 +40,8 @@
 .vwDiv {
     position: absolute;
     top: 300px;
-    width: 750px;
+    width: 375px;
+    left: 75px;
     height: 100px;
     background-color: red;
     z-index: 1;
@@ -48,7 +50,8 @@
 .percentDiv {
     position: absolute;
     top: 37%;
-    width: 100%;
+    width: 25%;
+    left: 10%;
     height: 100px;
     background-color: red;
     z-index: 1;

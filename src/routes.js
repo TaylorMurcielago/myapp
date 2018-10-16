@@ -5,6 +5,7 @@ import FormPage from './pages/form.vue';
 import Demo1Page from './pages/demo1.vue';
 import Demo2Page from './pages/demo2.vue';
 import Demo3Page from './pages/demo3.vue';
+import SwiperPage from './pages/swiper.vue';
 
 import DynamicRoutePage from './pages/dynamic-route.vue';
 import NotFoundPage from './pages/not-found.vue';
@@ -45,11 +46,15 @@ export default [{
         component: Demo3Page,
     },
     {
+        path: '/swiper/',
+        component: SwiperPage,
+    },
+    {
         path: '/dynamic-route/blog/:blogId/post/:postId/',
         component: DynamicRoutePage,
     },
     {
         path: '(.*)',
         component: NotFoundPage,
-    },
+    }
 ];

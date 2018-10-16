@@ -20,9 +20,9 @@
         <f7-button class="vw-test"  @click="nav_vw_test">
        VW tweenmax
       </f7-button>
-        <!-- <f7-button class="percent-test"  @click="nav_percent_test"> -->
-       <!-- 百分比 test -->
-      <!-- </f7-button> -->
+        <f7-button class="percent-test"  @click="nav_percent_test">
+       components-test
+      </f7-button>
     </f7-block> 
   </f7-page>
 </template>
@@ -52,7 +52,7 @@ import '../css/home.css';
         this.$f7router.navigate('/demo2/');
       },
        nav_percent_test:function(){
-        this.$f7router.navigate('/demo/');
+        this.$f7router.navigate('/swiper/');
       }
     }
     ,
@@ -67,6 +67,7 @@ import '../css/home.css';
         // jquery绑定函数操作
           $(".jqueryAlert").bind("click",function(){
             // 跳转问题 
+            //  this.$f7router.navigate('/demo/');
             alert("jquery绑定方法");
               var t = new TimelineLite();
             t.to(".tweenDiv",2,{top:600,scale:2}); 

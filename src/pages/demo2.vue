@@ -16,8 +16,9 @@ export default {
   methods:{
 
    vwAni:function(){
-            var t = new TimelineLite();
-            t.to(".vwAni",2,{left:Vue.prototype.px_vw(650),scale:1});  
+      this.$f7router.navigate('/HomePage/');
+            // var t = new TimelineLite();
+            // t.to(".vwAni",2,{left:Vue.prototype.px_vw(650),scale:1});  
       } 
   }
 
